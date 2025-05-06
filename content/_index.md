@@ -4,7 +4,7 @@ title: "Homepage"
 
 # Using docker-compose with Unraid
 
-This site/guide is intended to be a good, in-depth but easy to understand guide on how to user docker-compose on unRAID. 
+This site/guide is intended to be a good, in-depth but easy to understand guide on how to user docker-compose on Unraid. 
 
 It's still a work in progress and there's **a lot** more content to come. Bear with me as it'll likely take several weeks to really complete it, but there should be enough info now to get your feet wet with Docker Compose and start tinkering.
 

@@ -9,29 +9,29 @@ Hopefully you've read about the Drawbacks on the previous page, if not then I **
 
 I know some people, perhaps you yourself, look at using the terminal in sheer horror and can't imagine how that is "easy", but when you get the hang of it, it's really really easy to spin up new docker containers or change the configuration of your existing containers - it's literally just editing a text file, a text file that's fairly straightforward to read and running one of maybe 3 commands. 
 
-Conversely, when using any GUI-based docker manager (not just unRAID's), there's lots of fields to fill out and options to set. Compose lets you set those same options, but in an easy and consistent way.
+Conversely, when using any GUI-based docker manager (not just Unraid's), there's lots of fields to fill out and options to set. Compose lets you set those same options, but in an easy and consistent way.
 
 ## No reliance on templates
 
-unRAID's community applications are powered by "Templates" and it's one of the things that makes unRAID so great, but it's also a little bit of a drawback. If you've ever wanted to use a certain docker container but there was no community template available, you might find yourself a little bit stuck and unsure of how to proceed. Or perhaps you wanted to use a particular docker image for an application, but there was only a community template for a different fork of that app. 
+Unraid's community applications are powered by "Templates" and it's one of the things that makes Unraid so great, but it's also a little bit of a drawback. If you've ever wanted to use a certain docker container but there was no community template available, you might find yourself a little bit stuck and unsure of how to proceed. Or perhaps you wanted to use a particular docker image for an application, but there was only a community template for a different fork of that app. 
 
-unRAID makes it super easy to spin up containers using one of those templates, but slightly less so for less popular containers. It's still entirely possible to spin those containers up from unRAID's dockerman, but once you get the hang of compose you'll see how much easier it can be.
+Unraid makes it super easy to spin up containers using one of those templates, but slightly less so for less popular containers. It's still entirely possible to spin those containers up from Unraid's dockerman, but once you get the hang of compose you'll see how much easier it can be.
 
-To be clear: unRAID's templates are _great_ and I'm a huge fan of anything that reduces the barrier to entry for this technical stuff. If those templates are working for you and you're happy, feel free to stick with them.
+To be clear: Unraid's templates are _great_ and I'm a huge fan of anything that reduces the barrier to entry for this technical stuff. If those templates are working for you and you're happy, feel free to stick with them.
 
 However, if you stick with things and learn how to use compose, not only will you no longer be reliant on those templates, you won't even miss 'em!
 
 ## Compose is standard and it's everywhere
 
-Not everyone uses unRAID, but quite a lot of people do use docker containers - be that on their PC, on a different NAS, in a VM and so on. Anywhere you can run docker, you can run compose. 
+Not everyone uses Unraid, but quite a lot of people do use docker containers - be that on their PC, on a different NAS, in a VM and so on. Anywhere you can run docker, you can run compose. 
 
-By using compose now, you're no longer locked into unRAID. Unraid as a company could go bankrupt tomorrow and you would be able to take your compose file(s), drop it/them on another machine and run `docker-compose up` to get up and running again.
+By using compose now, you're no longer locked into Unraid. Unraid as a company could go bankrupt tomorrow and you would be able to take your compose file(s), drop it/them on another machine and run `docker-compose up` to get up and running again.
 
-In fact, aside from the initial setup of installing compose, nothing in this guide is all that specific to unRAID and the same steps would work just as well on a Synology or QNAP NAS.
+In fact, aside from the initial setup of installing compose, nothing in this guide is all that specific to Unraid and the same steps would work just as well on a Synology or QNAP NAS.
 
 ## It's easy to share configurations
 
-Have you looked on the unRAID forums or reddit and seen posts like "Post your unRAID dashboard" so you can see what apps and containers people are running? Or how about when troubleshooting that awkward Sonarr configuration, with the invariable badly cropped screenshots of their config?
+Have you looked on the Unraid forums or reddit and seen posts like "Post your Unraid dashboard" so you can see what apps and containers people are running? Or how about when troubleshooting that awkward Sonarr configuration, with the invariable badly cropped screenshots of their config?
 
 Well that's cool, but wouldn't it be neat if there was an easy way to share the _actual_ configuration? Remember, a compose file is just a text file, you can easily share that! 
 

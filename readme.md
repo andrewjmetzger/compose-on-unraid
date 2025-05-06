@@ -1,6 +1,6 @@
 # Overview
 
-This is a simple documentation site detailing how to use docker-compose on unRAID.
+This is a simple documentation site detailing how to use docker-compose on Unraid.
 
 # Building and running locally
 

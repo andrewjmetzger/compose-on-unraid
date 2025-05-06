@@ -30,5 +30,5 @@ services:
 ```
 Don't worry if that looks scary, we'll step through what it all means in the rest of this guide.
 
-Be aware, there are some drawbacks to using compose on unRAID, so please read through the following section so you know what you're getting yourself into.
+Be aware, there are some drawbacks to using compose on Unraid, so please read through the following section so you know what you're getting yourself into.
 

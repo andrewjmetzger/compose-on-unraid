@@ -1,6 +1,6 @@
 baseURL = "https://andrewjmetzger.github.io/compose-on-unraid/"
 languageCode = "en-us"
-title = "Using Docker Compose with unRAID"
+title = "Using Docker Compose with Unraid"
 
 # Change the default theme to be use when building the site with Hugo
 theme = "hugo-theme-learn"
@@ -59,7 +59,7 @@ home = [ "HTML", "RSS", "JSON"]
 	  
 [Languages]
 [Languages.en]
-title = "Using Docker Compose with unRAID"
+title = "Using Docker Compose with Unraid"
 weight = 1
 languageName = "English"
 landingPageURL = "/en"

@@ -51,7 +51,7 @@ The `web` part is actually just a freeform name - it could be anything, but by d
 
 The `image: nginx` part is the docker image itself that it pulls from the docker hub. It could have been `image: linuxserver/swag` instead and you can include tags from images, such as `image: nginx:latest` or specific versions, like `image: nginx:1.19.9`.
 
-Finally, we have the `ports:` section. This is where you specify any and all ports you're binding from your host to your container. The nginx web server always listens on port `80`, but we bound port `9090` in this example. This is a longwinded way of saying that port `9090` of the host (your unraid server) binds to port `80` on the container. That's why browsing http://yourservername:9090 brought up the nginx page.
+Finally, we have the `ports:` section. This is where you specify any and all ports you're binding from your host to your container. The nginx web server always listens on port `80`, but we bound port `9090` in this example. This is a longwinded way of saying that port `9090` of the host (your Unraid server) binds to port `80` on the container. That's why browsing http://yourservername:9090 brought up the nginx page.
 
 We can specify multiple ports with additions to this list, for example:
 
