@@ -2,8 +2,6 @@
 
 This is a simple documentation site detailing how to use docker-compose on unRAID.
 
-It's currently (temporarily) hosted at https://unraid.kushan.fyi/
-
 # Building and running locally
 
 This site is buit using [Hugo](https://gohugo.io/) using the [Learn](https://themes.gohugo.io//theme/hugo-theme-learn/en) theme.

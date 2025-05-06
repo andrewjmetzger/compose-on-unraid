@@ -19,4 +19,4 @@ In future updates to this guide, I'll add content on:
 * How to turn a `docker run` command into a compose definition
 * ...and much more!
 
-If you have any suggestions for other content, feel free to comment on any of the threads on reddit or the forums about this guide, or open up an issue on [the github page](https://github.com/neoKushan/compose-on-unraid) for this site.
+If you have any suggestions for other content, feel free to comment on any of the threads on reddit or the forums about this guide, or open up an issue on [the github page](https://github.com/andrewjmetzger/compose-on-unraid) for this site.
