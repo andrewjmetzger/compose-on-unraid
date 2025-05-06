@@ -3,53 +3,55 @@ title: "Installing compose"
 weight: 1
 ---
 
-There's a few different ways to install docker compose onto unRAID. There's no wrong method and not really many differences between them as the same compose binaries get installed regardless.
+## Introduction
 
-{{% notice note %}}
-These methods aren't permanent unless you add them to your Go file. After a reboot, compose will be missing from your machine. However, it'll persist until that next reboot so this is an easy way to test compose out without making permanent changes to your server.
-{{% /notice %}}
+A new Unraid plugin, [Docker Compose Manager] brings native Docker Compose functionality directly to your Unraid server. With this plugin installed, you can deploy and manage container stacks using both the command line as well as a new, integrated web UI—much like the streamlined experience that Docker Templates provide. This page will walk you through installing the plugin (referenced from the official [Docker Compose Manager forum thread](https://forums.unraid.net/topic/114415-plugin-docker-compose-manager/) ) and setting it up step by step.
 
-{{% notice note %}}
-You only need to do one of these, whatever one works for you.
-{{% /notice %}}
+## Prerequisites
 
-### First Method (using Python)
+Before you begin, make sure you have:
+  
+1. A running and up-to-date Unraid server, version 6.10.0 or later.
+2. Administrative access to the Unraid web UI.
+3. The Community Applications plugin installed (if you don’t have it yet, follow the instructions below).
 
-{{% notice note %}}
-This requires python installed. If you've installed the [nerd pack](https://forums.unraid.net/topic/35866-unraid-6-nerdpack-cli-tools-iftop-iotop-screen-kbd-etc/) you probably already have it installed.
-{{% /notice %}}
+## Step 1: Install Community Applications (if not installed)
 
-From the terminal, run this command:
-```bash
-pip3 install docker-compose
-```
+1. **Log in** to your Unraid web UI.
+2. Navigate to the **Plugins** tab and click on **Install Plugin**.
+3. In the URL field, enter: https://raw.githubusercontent.com/Squidly271/community.applications/master/plugins/community.applications.plg
+4. Click **Install** and wait until the installation process finishes.  
+This plugin is the gateway to installing many popular community plugins easily.
 
-That's it!
+## Step 2: Install Docker Compose Manager
 
-### Second Method (using cURL)
+1. Once Community Applications is available, click on the **Apps** tab in the Unraid web UI.
+2. In the search bar, type **Docker Compose Manager**.
+3. Locate the plugin in the search results and click the **Install** button.
+4. Follow any on-screen instructions to complete the installation. During installation, the plugin will deploy Docker Compose along with the compose switch, ensuring you can use both `docker compose` and `docker-compose` commands.
 
-If you don't have python installed, or if you prefer to pull directly from the "source", you can run this snippet from the terminal (Copy and paste the whole thing):
+## Step 3: Verify the Installation
 
-```bash
-COMPOSE_VERSION=$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep 'tag_name' | cut -d\" -f4)
-curl -L "https://github.com/docker/compose/releases/download/${COMPOSE_VERSION}/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose 
-chmod +x /usr/local/bin/docker-compose
-```
+1. Open the **Docker** tab in your Unraid interface.
+2. Look for a new control section dedicated to Docker Compose Manager. This section should let you create, edit, and execute Docker Compose YAML files.
+3. For additional confirmation, open a terminal window and run: `docker compose version`. The command should return the Docker Compose version information.
 
-After a few minutes, it'll be installed.
+## Step 4: Configure Docker Compose Manager
 
-## Testing
+1. Click on the new **Compose Manager** control tab within the Docker section.
+2. Use the interface to **create new compose files** or edit existing ones directly from your browser.
+3. Start your containers by clicking **Compose Up** and stop them with **Compose Down**.
+4. If you need to work with environment variables, take advantage of the plugin’s option to specify a custom `.env` file––simply input the path in the settings panel.
+5. Adjust any additional configuration options as required by your deployment needs.
 
-The easiest way to test if Compose is installed correctly is to run this command:
-```bash
-docker-compose --version
-```
-If it's installed, you'll get a response like `docker-compose version 1.29.0, build unknown`. That means it worked!
+## Step 5: Testing Your Configuration
 
-## An Alternative way to tinker (Portainer)
+1. To test, create a simple Docker Compose YAML file using the web UI.
+2. Execute the command by clicking **Compose Up** and verify that your test container is running as expected.
+3. For further details on command syntax and advanced options, consult the official [Docker Compose documentation](https://docs.docker.com/compose/cli-command/).
 
-If you don't want to mess about installing compose on your server, but you do want to tinker with compose files then you can use [Portainer](https://www.portainer.io/) to deploy a compose yaml file. 
+## Troubleshooting & Next Steps
 
-With Portainer installed, simply go to 'Stacks' on the left-hand menu, select '+ Add Stack' and paste your compose file into the web editor.
-
-Installing Portainer is out of scope for this guide, but it's relatively straightforward to install if you're able to install other docker apps.
+- **Plugin Visibility:** If the Compose Manager tab isn’t showing in your Docker view, refresh your browser and double-check the Community Applications installation.
+- **Command Line Issues:** Make sure you’re using the correct command variants (`docker compose` vs. `docker-compose`).
+- **YAML Errors:** Validate your YAML file syntax if you encounter errors during deployment.
