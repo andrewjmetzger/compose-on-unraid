@@ -21,7 +21,7 @@ Within that extra complexity comes a _lot_ of extra power, but if you're new to 
 
 Do you like those pretty icons on your unRAID dashboard? Well kiss goodbye to them:
 
-![unRAID Dashboard](/images/unraid-dashboard.png)
+![unRAID Dashboard](static/images/unraid-dashboard.png)
 
 Those icons are part of the unRAID-specific templates that the kind community developers create for you. No templates means no icons. If you'd like unRAID to do something about this, feel free to upvote [this feature suggestion](https://forums.unraid.net/topic/105284-use-docker-labels-for-unraid-specific-information-in-docker-templates-to-allow-for-a-11-map-between-unraid-templates-and-docker-compose-files/).
 
@@ -29,7 +29,7 @@ Those icons are part of the unRAID-specific templates that the kind community de
 
 For the same reason above, the handy "Web UI" link that appears when you click the container's icon won't be there. You'll still be able to stop and start containers, view logs, etc.
 
-![unRAID Dashboard](/images/unraid-no-webui.png)
+![unRAID Dashboard](static/images/unraid-no-webui.png)
 
 ## Automatic updates of containers is...weird...
 

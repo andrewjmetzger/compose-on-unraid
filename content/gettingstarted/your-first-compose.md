@@ -54,7 +54,7 @@ Eventually you'll see something like `Creating compose_web_1 ... done` and then 
 
 Open up your web browser and try navigating to http://yourservername:9080 (Note the port number and it's `http`, not `https`. You should hopefully see this screen:
 
-![nginx](/images/nginx.png)
+![nginx](static/images/nginx.png)
 
 If you see this - congrats! You're using docker-compose to spin up a docker container. 
 
