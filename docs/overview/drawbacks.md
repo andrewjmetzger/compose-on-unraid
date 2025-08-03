@@ -1,6 +1,6 @@
 ---
 title: "Drawbacks"
-weight: 1
+sidebar_position: 1
 ---
 
 If you're reading this guide, it's probably safe to assume that you're familiar enough with how Docker works on Unraid and although "docker is docker is docker", in that a docker container running on one machine should run just as well as a container than runs on another machine, Unraid has some extra niceities on top that don't really work with compose (Or indeed any other method of managing your containers outside the Unraid dashboard). 
@@ -21,7 +21,7 @@ Within that extra complexity comes a _lot_ of extra power, but if you're new to 
 
 Do you like those pretty icons on your Unraid dashboard? Well kiss goodbye to them:
 
-![Unraid Dashboard](static/images/unraid-dashboard.png)
+![Unraid Dashboard](/static/images/unraid-dashboard.png)
 
 Those icons are part of the Unraid-specific templates that the kind community developers create for you. No templates means no icons. If you'd like Unraid to do something about this, feel free to upvote [this feature suggestion](https://forums.unraid.net/topic/105284-use-docker-labels-for-unraid-specific-information-in-docker-templates-to-allow-for-a-11-map-between-unraid-templates-and-docker-compose-files/).
 
@@ -29,7 +29,7 @@ Those icons are part of the Unraid-specific templates that the kind community de
 
 For the same reason above, the handy "Web UI" link that appears when you click the container's icon won't be there. You'll still be able to stop and start containers, view logs, etc.
 
-![Unraid Dashboard](static/images/unraid-no-webui.png)
+![Unraid Dashboard](/static/images/unraid-no-webui.png)
 
 ## Automatic updates of containers is...weird...
 
@@ -39,6 +39,4 @@ Whether it's using the excellent Auto Update Applications plugin, or the Unraid 
 
 This also means that the "Auto Update Applications" plugin will reset any container that it _thinks_ needs an update on whatever schedule you've set. 
 
-{{% notice warning %}}
-To put it bluntly, although plenty of people use docker compose quite successfully on their Unraid servers, **this is not an officially supported solution**. If it all goes _bang_, Unraid/Lime software are under zero obligation to support you.
-{{% /notice %}}
+Warning: To put it bluntly, although plenty of people use docker compose quite successfully on their Unraid servers, **this is not an officially supported solution**. If it all goes _bang_, Unraid/Lime software are under zero obligation to support you.

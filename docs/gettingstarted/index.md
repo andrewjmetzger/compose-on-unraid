@@ -1,7 +1,7 @@
 ---
 title: "Getting Started"
 chapter: true
-weight: 2
+sidebar_position: 2
 ---
 
 # Getting Started

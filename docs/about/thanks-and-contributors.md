@@ -1,6 +1,6 @@
 ---
 title: "Thanks and Contributors"
-weight: 1
+sidebar_position: 1
 ---
 
 ## Special Thanks

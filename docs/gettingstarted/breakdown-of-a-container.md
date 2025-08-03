@@ -1,6 +1,6 @@
 ---
 title: "Breakdown of the example compose file"
-weight: 6
+sidebar_position: 6
 ---
 
 ## Breakdown of a compose file

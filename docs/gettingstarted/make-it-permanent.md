@@ -1,6 +1,6 @@
 ---
 title: "Making installation permanent"
-weight: 10
+sidebar_position: 10
 ---
 
 ### Modify Go file
@@ -20,9 +20,7 @@ curl -L "https://github.com/docker/compose/releases/download/${COMPOSE_VERSION}/
 chmod +x /usr/local/bin/docker-compose
 ```
 
-{{% notice warning %}}
-Be careful when editing any system files. While it's relatively easy to undo anything you've done here, it's still an important file.
-{{% /notice %}}
+Warning: Be careful when editing any system files. While it's relatively easy to undo anything you've done here, it's still an important file.
 
 Make note of how you edited your Go file as you may want to add some additions to it later.
 

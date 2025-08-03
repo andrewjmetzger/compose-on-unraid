@@ -1,7 +1,7 @@
 ---
 title: "About"
 chapter: true
-weight: 99
+sidebar_position: 99
 ---
 
 This site was built by a guy calling himself Kushan (neoKushan on reddit). His real name is Steve and he's been working in Software Development for [a long time](https://www.stevedonaghy.com/). 
