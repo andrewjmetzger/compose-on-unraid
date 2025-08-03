@@ -1,6 +1,5 @@
 ---
 title: "Installing compose"
-sidebar_position: 1
 ---
 
 ## Introduction

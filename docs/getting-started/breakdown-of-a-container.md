@@ -1,13 +1,12 @@
 ---
 title: "Breakdown of the example compose file"
-sidebar_position: 6
 ---
 
 ## Breakdown of a compose file
 
 Hopefully by now you've understood how to spin up and spin down a compose file, but what exactly _is_ that `yml` file all about?
 
-Well, firstly, what _is_ YAML? Essentially, it's a very simple language that is easy for both humans and computers to understand. It's pretty forgiving in terms of how it's formatted and how you specify some values, for example you might see some values enclosed in double quotes like "8080:80", but you can equally use single quotes such as `8080:80`. You can indent the file using tabs or spaces and as long as it's consistent, it will usually work. 
+Well, firstly, what _is_ YAML? Essentially, it's a very simple language that is easy for both humans and computers to understand. It's pretty forgiving in terms of how it's formatted and how you specify some values, for example you might see some values enclosed in double quotes like "8080:80", but you can equally use single quotes such as '8080:80'. You can indent the file using tabs or spaces and as long as it's consistent, it will usually work. 
 
 For a bigger overview of what YAML is, there's a good walkthrough [here](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started/), but don't worry too much about it, as you'll see it's fairly easy to understand just by reading some examples.
 
@@ -51,7 +50,7 @@ The `web` part is actually just a freeform name - it could be anything, but by d
 
 The `image: nginx` part is the docker image itself that it pulls from the docker hub. It could have been `image: linuxserver/swag` instead and you can include tags from images, such as `image: nginx:latest` or specific versions, like `image: nginx:1.19.9`.
 
-Finally, we have the `ports:` section. This is where you specify any and all ports you're binding from your host to your container. The nginx web server always listens on port `80`, but we bound port `9090` in this example. This is a longwinded way of saying that port `9090` of the host (your Unraid server) binds to port `80` on the container. That's why browsing http://yourservername:9090 brought up the nginx page.
+Finally, we have the `ports:` section. This is where you specify any and all ports you're binding from your host to your container. The nginx web server always listens on port `80`, but we bound port `9090` in this example. This is a longwinded way of saying that port `9090` of the host (your Unraid server) binds to port `80` on the container. That's why browsing http://192.168.1.3:9090 brought up the nginx page.
 
 We can specify multiple ports with additions to this list, for example:
 

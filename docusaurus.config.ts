@@ -36,6 +36,10 @@ const config: Config = {
     locales: ['en'],
   },
 
+  plugins: [
+    './plugins/variables-plugin',
+  ],
+
   presets: [
     [
       'classic',
@@ -47,6 +51,10 @@ const config: Config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/andrewjmetzger/compose-on-unraid/tree/main/docs/',
+          
+          remarkPlugins: [
+            require('./plugins/remark-variables'),
+          ],
         },
         blog: false, 
         // {

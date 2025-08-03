@@ -1,6 +1,5 @@
 ---
 title: "Benefits"
-sidebar_position: 2
 ---
 
 Hopefully you've read about the Drawbacks on the previous page, if not then I **strongly** advise you to read them, however there's a few reasons why it might be worth giving up some of those niceities.

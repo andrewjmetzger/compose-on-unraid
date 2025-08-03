@@ -1,6 +1,5 @@
 ---
 title: "Your first Compose file"
-sidebar_position: 5
 ---
 
 ## Overview
@@ -25,7 +24,8 @@ Notice: This compose file expects port `9080` to be available on your server, if
 
 This file contains a simple container definition for the nginx web server (the same webserver used in Swag). Don't worry if it doesn't make much sense, we're going to break that down later on.
 
-You'll need save the compose file somewhere on your server as `docker-compose.yml`. I am going to be doing everything from `/mnt/user/appdata/compose` so I have saved the file there, but if you're confident with file paths then you're free to put the file anywhere you like.
+You'll need save the compose file somewhere on your server as `docker-compose.yml`. I am going to be doing everything from 
+{{ $APPDATA_PATH}} /compose so I have saved the file there, but if you're confident with file paths then you're free to put the file anywhere you like.
 
 Notice: The file name `docker-compose.yml` is a special name that docker-compose will recognise. You can technically name the file anything you want, but you'll have to specify that file every time. For the sake of simplicity, we're going with the default name of `docker-compose.yml`.
 
@@ -48,9 +48,9 @@ This command will read the docker-compose.yml file and start spinning up the con
 
 Eventually you'll see something like `Creating compose_web_1 ... done` and then more output. The container is running!
 
-Open up your web browser and try navigating to http://yourservername:9080 (Note the port number and it's `http`, not `https`. You should hopefully see this screen:
+Open up your web browser and try navigating to http://192.168.1.3:9080. Take note the port number after the colon, and the protocol on the far left is `http`, not `https`. You should hopefully see this screen:
 
-<!-- ![nginx](/static/images/nginx.png) -->
+![nginx](/static/img/nginx.png)
 
 If you see this - congrats! You're using docker-compose to spin up a docker container. 
 
@@ -66,7 +66,7 @@ docker-compose up -d
 
 That `-d` flag means "detached", compose will do exactly what it did before and start the nginx container but in the background, leaving your terminal free for more commands. This time, it should run much faster as well as it's already downloaded the image during the previous steps.
 
-Now, if you go to http://yourservername:9080 again you should get the nginx page from above. Great! But now that it's running in the background, how do we stop it? Easy - 
+Now, if you go to http://192.168.1.3:9080 again you should get the nginx page from above. Great! But now that it's running in the background, how do we stop it? Easy - 
 
 ```bash
 docker-compose down
@@ -82,7 +82,7 @@ Let's start up the container again so we can see one of the things that makes co
 docker-compose up -d
 ```
 
-Check that the nginx page is visible at http://yourservername:9080, this is nothing different than what you've done before.
+Check that the nginx page is visible at http://192.168.1.3:9080, this is nothing different than what you've done before.
 
 Now, edit the `docker-compose.yml` file in your favourite text editor (I like VS Code, but any text editor will do). We're going to change the port from `9080` to a different number, `9090`. Your file should like like this:
 
