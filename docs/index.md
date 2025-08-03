@@ -1,5 +1,7 @@
 ---
-title: "Homepage"
+title: "Home"
+sidebar_position: 1
+slug: /
 ---
 
 # Using docker-compose with Unraid

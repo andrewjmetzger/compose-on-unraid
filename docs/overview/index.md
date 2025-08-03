@@ -1,7 +1,6 @@
 ---
 title: "Overview"
 chapter: true
-sidebar_position: 1
 ---
 
 ### Overview
