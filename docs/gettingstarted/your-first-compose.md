@@ -1,6 +1,6 @@
 ---
 title: "Your first Compose file"
-weight: 5
+sidebar_position: 5
 ---
 
 ## Overview
@@ -21,17 +21,13 @@ services:
          - "9080:80"
 ```
 
-{{% notice info %}}
-This compose file expects port `9080` to be available on your server, if a different service is using that port change `9080` to a free port number and for the descriptions below, replace `9080` with the one you've selected.
-{{% /notice %}}
+Notice: This compose file expects port `9080` to be available on your server, if a different service is using that port change `9080` to a free port number and for the descriptions below, replace `9080` with the one you've selected.
 
 This file contains a simple container definition for the nginx web server (the same webserver used in Swag). Don't worry if it doesn't make much sense, we're going to break that down later on.
 
 You'll need save the compose file somewhere on your server as `docker-compose.yml`. I am going to be doing everything from `/mnt/user/appdata/compose` so I have saved the file there, but if you're confident with file paths then you're free to put the file anywhere you like.
 
-{{% notice info %}}
-The file name `docker-compose.yml` is a special name that docker-compose will recognise. You can technically name the file anything you want, but you'll have to specify that file every time. For the sake of simplicity, we're going with the default name of `docker-compose.yml`.
-{{% /notice %}}
+Notice: The file name `docker-compose.yml` is a special name that docker-compose will recognise. You can technically name the file anything you want, but you'll have to specify that file every time. For the sake of simplicity, we're going with the default name of `docker-compose.yml`.
 
 You'll then want to open your terminal / SSH in (Like you did before to install docker-compose) and `cd` to that folder, i.e.
 
@@ -54,7 +50,7 @@ Eventually you'll see something like `Creating compose_web_1 ... done` and then 
 
 Open up your web browser and try navigating to http://yourservername:9080 (Note the port number and it's `http`, not `https`. You should hopefully see this screen:
 
-![nginx](static/images/nginx.png)
+<!-- ![nginx](/static/images/nginx.png) -->
 
 If you see this - congrats! You're using docker-compose to spin up a docker container. 
 
@@ -112,6 +108,4 @@ If you had more than one container defined within this text file, compose would 
 
 If you want to tinker with the file, feel free but when you're done, don't forget to run `docker-compose down` again.
 
-{{% notice info %}}
-If you've closed your terminal or logged out, remember when accessing the terminal again that you need to `cd` to `/mnt/user/appdata/compose` before you run your docker-compose commands or you'll get errors as it cannot find the docker-compose.yml file.
-{{% /notice %}}
+Note: If you've closed your terminal or logged out, remember when accessing the terminal again that you need to `cd` to `/mnt/user/appdata/compose` before you run your docker-compose commands or you'll get errors as it cannot find the docker-compose.yml file.
