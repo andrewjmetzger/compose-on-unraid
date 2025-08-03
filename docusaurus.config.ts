@@ -36,9 +36,9 @@ const config: Config = {
     locales: ['en'],
   },
 
-  plugins: [
-    './plugins/variables-plugin',
-  ],
+  // plugins: [
+  //   './plugins/variables-plugin',
+  // ],
 
   presets: [
     [
@@ -52,9 +52,9 @@ const config: Config = {
           editUrl:
             'https://github.com/andrewjmetzger/compose-on-unraid/tree/main/docs/',
           
-          remarkPlugins: [
-            require('./plugins/remark-variables'),
-          ],
+          // remarkPlugins: [
+          //   require('./plugins/remark-variables'),
+          // ],
         },
         blog: false, 
         // {
